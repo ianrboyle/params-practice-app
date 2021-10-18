@@ -8,4 +8,9 @@ class ParamsController < ApplicationController
     input = params[:segment].upcase
     render json: {message: input}
   end
+
+  def body_params
+    input = params["body"].upcase
+    render json: {message: input}
+  end
 end
